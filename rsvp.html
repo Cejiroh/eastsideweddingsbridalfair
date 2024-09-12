@@ -45,10 +45,12 @@
 						<span>The first major collaboration of wedding suppliers in Rizal. Each registration is good for two (2) persons.</span>
 						<br />
 						<br />
-						<form method="post" action="#" >
+						
+						<form method="post" action="https://script.google.com/macros/s/AKfycby_2x8-v0VOTApgWEOVKPX8Tke3_ZgfxgUNw9YlCE8uOkh8pBvOqHvJ07WrdJ6dKWr3GA/exec" id="form">
+						<input type="hidden" value="RSVP" id="formType" name="formType"  />
 							<div class="fields">
 								<div class="field half">
-									<label for="discover">How did you discover this invitation?*</label>
+									<label for="discover">How did you discover this invitation?</label>
 									<select name="discover">
 										<option hidden selected>Select An Option</option>
 										<option value="Facebook Ads">Facebook Ads</option>
@@ -61,24 +63,24 @@
 									</select>
 								</div>
 								<div class="field half">
-									<label for="fname">First Name (Groom / Bride / Celebrant)*</label>
-									<input type="text" name="fname" id="fname" value="" />
+									<label for="first_name">First Name (Groom / Bride / Celebrant)*</label>
+									<input type="text" name="first_name" id="first_name" value="" required />
 								</div>
 								<div class="field half">
-									<label for="lname">Last Name*</label>
-									<input type="text" name="lname" id="lname" value="" />
+									<label for="last_name">Last Name*</label>
+									<input type="text" name="last_name" id="last_name" value="" required />
 								</div>
 								<div class="field half">
-									<label for="number">Mobile Number*</label>
-									<input type="text" name="number" id="number" value="" />
+									<label for="mobile_number">Mobile Number*</label>
+									<input type="text" name="mobile_number" id="mobile_number" value="" required />
 								</div>
 								<div class="field half">
 									<label for="email">Email*</label>
-									<input type="text" name="email" id="email" value="" />
+									<input type="email" name="email" id="email" value="" required />
 								</div>								
 								<div class="field half">
 									<label for="event">What Event*</label>
-									<select name="event">
+									<select name="event" required>
 										<option hidden selected>Select An Option</option>
 										<option value="Kiddie Birthday">Kiddie Birthday</option>
 										<option value="Adult Birthday">Adult Birthday</option>
@@ -91,11 +93,11 @@
 								</div>
 								<div class="field half">
 									<label for="date">Wedding Date / Event Date*</label>
-									<input type="date" name="date">
+									<input type="date" name="date" required>
 								</div>
 								<div class="field half">
 									<label for="location">What Location In Rizal Do You Like to Hold Your Event?*</label>
-									<select name="location">
+									<select name="location" required>
 										<option hidden selected>Select An Option</option>
 										<option value="Antipolo">Antipolo</option>
 										<option value="Taytay">Taytay</option>
@@ -114,7 +116,7 @@
 									</select>
 								</div>
 								<div class="field half">
-									<label for="booked">With Booked Venue?*</label>
+									<label for="booked">With Booked Venue?</label>
 									<input type="radio" name="booked" value="yes" id="yes">
 									<label for="yes">Yes</label> 
 									<input type="radio" name="booked" value="no" id="no">
@@ -125,46 +127,73 @@
 									<input type="text" name="booked_venue" id="booked_venue" value="" />
 								</div>
 								<div class="field">
-									<label for="suppliers">What Suppliers Are You Looking For? (Check All That Applies)*</label>  
-									<input type="checkbox" value="Coordinator / Event Planner" id="Coordinator / Event Planner" />
+									<label for="suppliers">What Suppliers Are You Looking For? (Check All That Applies)</label>  
+									<input type="checkbox" value="yes" name="Coordinator / Event Planner" id="Coordinator / Event Planner" />
 									<label for="Coordinator / Event Planner">Coordinator / Event Planner</label>
-									<input type="checkbox" value="Hair and Make Up Artist" id="Hair and Make Up Artist">
+									<input type="checkbox" value="yes" name="Hair and Make Up Artist" id="Hair and Make Up Artist">
 									<label for="Hair and Make Up Artist">Hair and Make Up Artist</label>
-									<input type="checkbox" value="Photo and Video Team" id="Photo and Video Team" />
+									<input type="checkbox" value="yes" name="Photo and Video Team" id="Photo and Video Team" />
 									<label for="Photo and Video Team">Photo and Video Team</label>
-									<input type="checkbox" value="Bridal Car" id="Bridal Car"/>
+									<input type="checkbox" value="yes" name="Bridal Car" id="Bridal Car"/>
 									<label for="Bridal Car">Bridal Car</label>
-									<input type="checkbox" value="Souvenirs" id="Souvenirs"/>
+									<input type="checkbox" value="yes" name="Souvenirs" id="Souvenirs"/>
 									<label for="Souvenirs">Souvenirs</label>
-									<input type="checkbox" value="Events Host" id="Events Host"/>
+									<input type="checkbox" value="yes" name="Events Host" id="Events Host"/>
 									<label for="Events Host">Events Host</label>
-									<input type="checkbox" value="Preparation Hotel / Accommodation" id="Preparation Hotel / Accommodation"/>
+									<input type="checkbox" value="yes" name="Preparation Hotel / Accommodation" id="Preparation Hotel / Accommodation"/>
 									<label for="Preparation Hotel / Accommodation">Preparation Hotel / Accommodation</label>
-									<input type="checkbox" value="Florist" id="Florist"/>
+									<input type="checkbox" value="yes" name="Florist" id="Florist"/>
 									<label for="Florist">Florist</label>
-									<input type="checkbox" value="Photo Booth / Photo Man" id="Photo Booth / Photo Man"/>
+									<input type="checkbox" value="yes" name="Photo Booth / Photo Man" id="Photo Booth / Photo Man"/>
 									<label for="Photo Booth / Photo Man">Photo Booth / Photo Man</label>
-									<input type="checkbox" value="Accoustic Band" id="Accoustic Band"/>
+									<input type="checkbox" value="yes" name="Accoustic Band" id="Accoustic Band"/>
 									<label for="Accoustic Band">Accoustic Band</label>
-									<input type="checkbox" value="Customized Cakes" id="Customized Cakes"/>
+									<input type="checkbox" value="yes" name="Customized Cakes" id="Customized Cakes"/>
 									<label for="Customized Cakes">Customized Cakes</label>
-									<input type="checkbox" value="Mobile bar" id="Mobile bar"/>
+									<input type="checkbox" value="yes" name="Mobile bar" id="Mobile bar"/>
 									<label for="Mobile bar">Mobile bar</label>
 								</div>
 								<div class="field">
-									<label for="remarks">Remarks</label>
-									<textarea name="remarks" id="remarks" rows="6"></textarea>
+									<label for="Remarks">Remarks</label>
+									<textarea name="Remarks" id="Remarks" rows="6"></textarea>
 								</div>
 							</div>
 							<ul class="actions special">
 								<li><input type="submit" name="submit" id="submit" value="Send" /></li>
 							</ul>
 						</form>
+						
+						<article id="success" class="centered" style="display:none;">
+						<h3>Your form has been submitted</h3>
+						</article>
 						</header>
 					</section>
 
 				</div>
+				<script>
+				   const form = document.querySelector("#form")
+				   const submitButton = document.querySelector("#submit")
+				   const scriptURL = 'https://script.google.com/macros/s/AKfycby_2x8-v0VOTApgWEOVKPX8Tke3_ZgfxgUNw9YlCE8uOkh8pBvOqHvJ07WrdJ6dKWr3GA/exec'
 
+				   form.addEventListener('submit', e => {
+					 submitButton.disabled = true
+					 e.preventDefault()
+					 let requestBody = new FormData(form)
+					 fetch(scriptURL, { method: 'POST', body: requestBody})
+					   .then(response => {
+						  document.getElementById("form").style.display = "none";
+							document.getElementById("success").style.display = "block";
+
+						  submitButton.disabled = false
+						 })
+					   .catch(error => {
+					   alert('Your form has failed. Please try again or contact us at Phone: (02) 8286-9256 | (0965) 605-1741 | (0936) 173-2001', error.message)
+						 submitButton.disabled = false
+
+					   }
+					   )
+				   })
+				</script>
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">

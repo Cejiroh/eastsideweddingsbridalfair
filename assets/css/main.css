@@ -2121,7 +2121,16 @@ input, select, textarea {
 
 			.image.centered img {
 				margin: 1em auto;
-				width: auto;
+				width: 100% auto;
+			}
+		.svg.centered {
+			display: block;
+			margin: 0 0 2em 0;
+			text-align: center;
+		}
+
+			.centered svg {
+				margin: 1em auto;
 			}
 
 /* List */
@@ -2761,16 +2770,30 @@ input, select, textarea {
 	#sidebar > section {
 		margin-bottom: 0;
 	}
+	#sidebar section{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px; /* Adjust the gap between articles as needed */
+	}
+
+article {
+  /* Add any additional styling for articles here */
+}
 
 /* Main */
 
 	#main {
 		margin-bottom: 0;
+		text-align:center;
+	}
+	#main img{
+		width: 100%;
 	}
 
 		#main section:first-of-type {
 			padding-top: 2em;
 		}
+
 
 /* Footer */
 
@@ -2827,6 +2850,7 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 2em 0 2em 0;
 		margin-bottom: 0;
+		margin-top: -2em;
 	}
 
 		.carousel .forward, .carousel .backward {
@@ -2907,10 +2931,10 @@ input, select, textarea {
 
 		.carousel article {
 			display: inline-block;
-			width: 18em;
+			width: 12em;
 			background: #fff;
 			text-align: center;
-			padding: 0 1em 3em 1em;
+			padding: 1em 1em 1.5em 1em;
 			margin: 0 2em 0 0;
 			white-space: normal;
 			opacity: 1.0;
@@ -2959,7 +2983,7 @@ input, select, textarea {
 				}
 
 				.carousel article {
-					width: 18em;
+					width: 12em;
 					margin: 0 1.25em 0 0;
 				}
 

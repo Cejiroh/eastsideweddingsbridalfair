@@ -43,23 +43,23 @@
 						<h2>Have a question or need more information?</h2>
 						<h3>Fill out our online contact form, and a member of our team will get back to you shortly.</h3>
 						<br />
-						<form method="post" action="#" >
+						<form method="post" action="https://script.google.com/macros/s/AKfycbzhNYoouLSNDh88ll8CwvWH_rr5h6ElogEa_gccqwflyIEIlr8iuecW1YUsHM_ulg0dLA/exec" id="form">
 							<div class="fields">
 								<div class="field half">
-									<label for="fname">First Name*</label>
-									<input type="text" name="fname" id="fname" value="" />
+									<label for="first_name">First Name*</label>
+									<input type="text" name="first_name" id="first_name" value="" required />
 								</div>
 								<div class="field half">
-									<label for="lname">Last Name*</label>
-									<input type="text" name="lname" id="lname" value="" />
+									<label for="last_name">Last Name*</label>
+									<input type="text" name="last_name" id="last_name" value="" />
 								</div>
 								<div class="field half">
-									<label for="number">Mobile Number</label>
-									<input type="text" name="number" id="number" value="" />
+									<label for="mobile_number">Mobile Number</label>
+									<input type="text" name="mobile_number" id="mobile_number" value="" required />
 								</div>
 								<div class="field half">
 									<label for="email">Email*</label>
-									<input type="text" name="email" id="email" value="" />
+									<input type="email" name="email" id="email" value="" required />
 								</div>
 								<div class="field">
 									<label for="remarks">Remarks</label>
@@ -70,11 +70,38 @@
 								<li><input type="submit" name="submit" id="submit" value="Send" /></li>
 							</ul>
 						</form>
+						<article id="success" class="centered" style="display:none;">
+						<h3>Your form has been submitted</h3>
+						</article>
 						</header>
 					</section>
 
 				</div>
 
+		<script>
+		   const form = document.querySelector("#form")
+		   const submitButton = document.querySelector("#submit")
+		   const scriptURL = 'https://script.google.com/macros/s/AKfycbzhNYoouLSNDh88ll8CwvWH_rr5h6ElogEa_gccqwflyIEIlr8iuecW1YUsHM_ulg0dLA/exec'
+
+		   form.addEventListener('submit', e => {
+			 submitButton.disabled = true
+			 e.preventDefault()
+			 let requestBody = new FormData(form)
+			 fetch(scriptURL, { method: 'POST', body: requestBody})
+			   .then(response => {
+				  document.getElementById("form").style.display = "none";
+					document.getElementById("success").style.display = "block";
+
+				  submitButton.disabled = false
+				 })
+			   .catch(error => {
+			   alert('Your form has failed. Please try again or contact us at Phone: (02) 8286-9256 | (0965) 605-1741 | (0936) 173-2001', error.message)
+				 submitButton.disabled = false
+
+			   }
+			   )
+		   })
+		</script>
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
