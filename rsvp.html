@@ -117,12 +117,12 @@
 								</div>
 								<div class="field half">
 									<label for="booked">With Booked Venue?</label>
-									<input type="radio" name="booked" value="yes" id="yes">
+									<input type="radio" name="booked" value="yes" id="yes" onclick="toggleInput(true)">
 									<label for="yes">Yes</label> 
-									<input type="radio" name="booked" value="no" id="no">
+									<input type="radio" name="booked" value="no" id="no" onclick="toggleInput(false)">
 									<label for="no">No</label>
 								</div>
-								<div class="field half">
+								<div class="field half" id="bookedvenue" style="display: none;">
 									<label for="booked_venue">What Is Your Booked Venue?</label>
 									<input type="text" name="booked_venue" id="booked_venue" value="" />
 								</div>
@@ -154,6 +154,10 @@
 									<label for="Customized Cakes">Customized Cakes</label>
 									<input type="checkbox" value="yes" name="Mobile bar" id="Mobile bar"/>
 									<label for="Mobile bar">Mobile bar</label>
+									<input type="checkbox" value="yes" name="Caterer" id="Caterer"/>
+									<label for="Caterer">Caterer</label>
+									<input type="checkbox" value="yes" name="Grazing Table/Food Carts" id="Grazing Table/Food Carts"/>
+									<label for="Grazing Table/Food Carts">Grazing Table/Food Carts</label>
 								</div>
 								<div class="field">
 									<label for="Remarks">Remarks</label>
@@ -173,6 +177,14 @@
 
 				</div>
 				<script>
+					function toggleInput(show) {
+						var inputField = document.getElementById('bookedvenue');
+						if (show) {
+							inputField.style.display = 'block';
+						} else {
+							inputField.style.display = 'none';
+						}
+					}
 				   const form = document.querySelector("#form")
 				   const submitButton = document.querySelector("#submit")
 				   const scriptURL = 'https://script.google.com/macros/s/AKfycby_2x8-v0VOTApgWEOVKPX8Tke3_ZgfxgUNw9YlCE8uOkh8pBvOqHvJ07WrdJ6dKWr3GA/exec'
