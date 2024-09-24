@@ -115,21 +115,27 @@
 										<option value="San Mateo">San Mateo</option>
 									</select>
 								</div>
-								<div class="field half">
-									<label for="booked">With Booked Venue?</label>
+								<div class="field quarter"">
+								
+									<label>With Booked Venue?</label>
 									<input type="radio" name="booked" value="yes" id="yes" onclick="toggleInput(true)">
 									<label for="yes">Yes</label> 
 									<input type="radio" name="booked" value="no" id="no" onclick="toggleInput(false)">
 									<label for="no">No</label>
 								</div>
-								<div class="field half" id="bookedvenue" style="display: none;">
+								<div class="field quarter" id="bookedvenue" style="visibility: hidden;">
 									<label for="booked_venue">What Is Your Booked Venue?</label>
 									<input type="text" name="booked_venue" id="booked_venue" value="" />
 								</div>
+								<div class="field half">
+									<label for="densol_catering">Reserve a slot for the grand food tasting by Densol's Catering?</label>
+									<input type="radio" name="densol_catering" value="Reserve a slot for the grand food tasting by Densol's Catering?" id="densol_catering_yes">
+									<label for="densol_catering_yes">Yes</label> 
+									<input type="radio" name="densol_catering" value="no" id="densol_catering_no">
+									<label for="densol_catering_no">No</label>
+								</div>
 								<div class="field">
 									<label for="suppliers">What Suppliers Are You Looking For? (Check All That Applies)</label>  
-									<input type="checkbox" value="Reserve a slot for the grand food tasting by Densol's Catering?" name="Reserve a slot for the grand food tasting by Densol's Catering?" id="Reserve a slot for the grand food tasting by Densol's Catering?" />
-									<label for="Reserve a slot for the grand food tasting by Densol's Catering?">Reserve a slot for the grand food tasting by Densol's Catering?</label>
 									<input type="checkbox" value="Coordinator / Event Planner" name="Coordinator / Event Planner" id="Coordinator / Event Planner" />
 									<label for="Coordinator / Event Planner">Coordinator / Event Planner</label>
 									<input type="checkbox" value="Hair and Make Up Artist" name="Hair and Make Up Artist" id="Hair and Make Up Artist">
@@ -180,9 +186,9 @@
 					function toggleInput(show) {
 						var inputField = document.getElementById('bookedvenue');
 						if (show) {
-							inputField.style.display = 'block';
+							inputField.style.visibility = 'visible';
 						} else {
-							inputField.style.display = 'none';
+							inputField.style.visibility = 'hidden';
 						}
 					}
 				   const form = document.querySelector("#form")
