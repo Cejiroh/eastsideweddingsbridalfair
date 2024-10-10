@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-
 ol, ul {
 	list-style: none;
 }
@@ -225,7 +224,6 @@ input, select, textarea {
 		color: rgba(128, 128, 128, 0.75);
 		font-size: 0.8em;
 	}
-
 /* Container */
 
 	.container {
@@ -2525,6 +2523,27 @@ input, select, textarea {
 		text-align: center;
 		padding: 7.5em 0 2em 0;
 		cursor: default;
+        overflow: hidden;
+	}
+	
+	#header .button {
+		line-height: 1.5em;
+		text-align: center;
+		font-size: 1em;
+		padding: 5;
+	}
+	
+	video {
+		position: absolute;
+		object-fit: contain;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -1;
+		transform: translate(-50%, -50%);
 	}
 
 		#header:before {
@@ -2560,16 +2579,6 @@ input, select, textarea {
 				color: inherit;
 			}
 
-		#header .button {
-			display: inline-block;
-			border-radius: 100%;
-			width: 4.5em;
-			height: 4.5em;
-			line-height: 4.5em;
-			text-align: center;
-			font-size: 1.25em;
-			padding: 0;
-		}
 
 		#header hr {
 			top: 1.5em;
@@ -2591,9 +2600,17 @@ input, select, textarea {
 		min-height: 40em;
 		background-attachment: fixed;
 	}
+	body.homepage button {
+		
+			font-size: 2em;
+	}
 
 		body.homepage #header h1 {
-			font-size: 4em;
+			font-size: 2em;
+		}
+		body.homepage #header h2 {
+			font-size: 1.5em;
+			color: #d44e3e;
 		}
 
 		body.homepage #header:after {
@@ -2614,12 +2631,28 @@ input, select, textarea {
 			-webkit-transition-delay: 0.5s;
 			-ms-transition-delay: 0.5s;
 			transition-delay: 0.5s;
+			
 		}
 
 	body.homepage.is-preload #header:after {
 		opacity: 1;
 	}
-
+	.headpromo {
+		background-color: rgba(255, 255, 255, 1);
+		background-blend-mode: overlay;
+		padding: 2vh;
+		border-radius: 0.5em;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		bottom: 0;
+		left: 0; 
+		margin-top: 65vh;
+	}
+	.headpromo div{
+        text-align: center;
+		padding: 10px;	
+	}
 	.promo {
 		background-image: url("../../images/Event Details.jpg" ), linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8));
 		background-blend-mode: overlay;
@@ -2645,7 +2678,7 @@ input, select, textarea {
 		width: 100%;
 		text-align: center;
 		padding: 1.5em 0 1.5em 0;
-		z-index: 1;
+		z-index: 999;
 		overflow: hidden;
 		background-color: rgba(17, 26, 40, 0.8);
 		font-weight: 500;
