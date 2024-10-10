@@ -53,7 +53,7 @@
 								<div class="field half">
 									<label for="discover">How did you discover this invitation?</label>
 									<select name="discover">
-										<option hidden selected>Select An Option</option>
+										<option value="" hidden selected>Select An Option</option>
 										<option value="Facebook Ads">Facebook Ads</option>
 										<option value="Recommended By A Venue">Recommended By a Venue</option>
 										<option value="From Rizal Government Post">From Rizal Government Post</option>
@@ -82,7 +82,7 @@
 								<div class="field half">
 									<label for="event">What Event*</label>
 									<select name="event" required>
-										<option hidden selected>Select an Event</option>
+										<option value="" hidden selected>Select an Event</option>
 										<option value="Kiddie Birthday">Kiddie Birthday</option>
 										<option value="Adult Birthday">Adult Birthday</option>
 										<option value="Debut">Debut</option>
@@ -93,18 +93,22 @@
 									</select>
 								</div>
 								<div class="field half">
-									<label for="date">Wedding Date / Event Date*</label>
+									<label for="date">Registration for:</label>
 								<select name="date" id="date" required>
-									<option hidden selected>Choose a Date</option>
-										<option value="Nov 09, 2024">Nov 09, 2024</option>
-										<option value="Nov 10, 2024">Nov 10, 2024</option>
+									<option hidden selected>Choose a Day</option>
+										<option value="Nov 09, 2024">Day 1 - Nov 09, 2024</option>
+										<option value="Nov 10, 2024">Day 2 - Nov 10, 2024</option>
 										
 									</select>
 								</div>
 								<div class="field half">
+									<label for="date">Wedding Date / Event Date*</label>
+									<input type="date" name="date" id="date" required >
+								</div>
+								<div class="field half">
 									<label for="location">What Location In Rizal Do You Like to Hold Your Event?*</label>
 									<select name="location" required>
-										<option hidden selected>Select a Location</option>
+										<option value="" hidden selected>Select a Location</option>
 										<option value="Antipolo">Antipolo</option>
 										<option value="Taytay">Taytay</option>
 										<option value="Cainta">Cainta</option>
@@ -125,7 +129,7 @@
 									<label for="densol_catering">Reserve a slot for the grand food tasting by Densol's Catering?</label>
 									
 								<select name="densol_catering" id="densol_catering" required>
-									<option hidden selected>Timeslot Reservation</option>
+									<option value ="" hidden selected >Timeslot Reservation</option>
 										<option value="1pm">1pm</option>
 										<option value="2pm">2pm</option>
 										<option value="3pm">3pm</option>
@@ -140,14 +144,6 @@
 									
 								</div>
 								<div class="field quarter"">
-								
-									<label>With Booked Venue?</label>
-									<input type="radio" name="booked" value="Yes" id="yes" onclick="toggleInput(true)">
-									<label for="yes">Yes</label> 
-									<input type="radio" name="booked" value="No Booked Venue" id="no" onclick="toggleInput(false)">
-									<label for="no">No</label>
-								</div>
-								<div class="field quarter" id="bookedvenue" style="visibility: hidden;">
 									<label for="booked_venue">What Is Your Booked Venue?</label>
 									<input type="text" name="booked_venue" id="booked_venue" value="" />
 								</div>
